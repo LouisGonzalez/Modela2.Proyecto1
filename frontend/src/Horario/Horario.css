@@ -1,0 +1,47 @@
+.schedule {
+  justify-content: center;
+  padding: 10px;
+  margin: 20px;
+  width: calc(100vw - 40px);
+  overflow-x: auto;
+}
+
+.time-slots {
+  display: flex;
+}
+
+.day-column {
+  flex: 1;
+  padding: 0 10px;
+  border-right: 1px solid #ccc;
+}
+
+.day {
+  padding: 8px;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  background-color: #e0e0e0;
+}
+
+.time-slot {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.time {
+  font-weight: bold;
+}
+
+.event {
+  margin-top: 4px;
+  color: #333;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+}

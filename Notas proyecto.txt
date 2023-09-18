@@ -1,0 +1,48 @@
+Numero de salones
+Total de asientos por salon
+
+Carreras -> 
+Cursos por carrera -> Seccion unica por curso
+Profesor asignado por curso (Opcional) -> En caso de no tener asignado un profesor se daran recomendaciones de quienes podrian darlo.
+Total de asignados por cada curso.
+
+LOS HORARIOS VAN DE 2 DE LA TARDE A 7 DE LA NOCHE
+
+--------------------------------------------------------------------------------------------
+
+Generacion de horario en base a disponibilidad de salones
+
+Al inicio todos los salones estan vacios en cualquier horario
+
+
+
+PASOS PARA ENCONTRARLE POSICION A UN CURSO CON ASIGNACIONES
+
+iterativamente se pasa por los salones y se encuentra el salon que menor numero de asientos desperdiciaria con ese curso
+Se selecciona ese salon
+Se revisa en su columna si tiene espacios disponibles
+	Si tiene espacios se asigna
+	Si no tiene espacios ese salon se elimina de las posibilidades
+Se repite el proceso pero quitando ese salon para revisar
+
+
+
+---------------------------------------------------------------------------------------------
+
+Generacion de horario en base a disponibilidad de materias
+
+PASOS PARA ENCONTRARLE POSICION A UN CURSO CON ASIGNACIONES
+
+el arreglo de cursos se divide en 2
+	cursos con prioridad 'true'
+	cursos con prioridad 'false'
+primero se trabaja con los cursos de prioridad true
+	iterativamente se pasa por los salones y se encuentra el salon que menor numero de asientos desperdiciaria con ese curso
+	se selecciona ese salon
+	se revisa en su columna si tiene espacios disponibles
+		si tiene espacios se asigna
+		si no tiene espacios ese salon se elimina de las posibilidades
+	se repite el proceso pero quitando ese salon para revisar
+
+
+

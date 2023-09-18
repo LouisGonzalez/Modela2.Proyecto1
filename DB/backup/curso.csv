@@ -1,0 +1,13 @@
+"id";"nombre";"carrera";"noAsignados";"catedratico";"prioritario"
+1;"Curso 1";1;25;1;1
+2;"Curso 2";1;14;3;1
+3;"Curso 3";1;16;3;1
+4;"Curso 4";1;31;1;0
+5;"Curso 5";1;27;4;0
+6;"Curso 6";1;10;1;1
+7;"Curso 1";2;11;1;0
+8;"Curso 2";2;9;2;1
+9;"Curso 3";2;34;2;1
+10;"Curso 4";2;39;2;1
+11;"Curso 5";2;22;2;1
+12;"Curso 6";2;19;4;1
