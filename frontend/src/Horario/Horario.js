@@ -66,13 +66,14 @@ function Horario() {
       for (let i = 0; i < horario.noSalones; i++) {
         const space = (
           <div key={i} className="day-column">
-            <div className="day">Salon{i}</div>
+            <div className="day">Salon {i + 1}</div>
             {horario.opciones[0].asignaciones.map(
               (asignacion) =>
                 asignacion.salon === i + 1 && (
                   <div className="time-slot">
                     <div className="time">{asignacion.horario}</div>
                     <div className="event">{asignacion.curso}</div>
+                    <div className="event">{asignacion.carrera}</div>
                   </div>
                 )
             )}
@@ -91,13 +92,14 @@ function Horario() {
       for (let i = 0; i < horario.noSalones; i++) {
         const space = (
           <div key={i} className="day-column">
-            <div className="day">Salon{i}</div>
+            <div className="day">Salon {i + 1}</div>
             {horario.opciones[1].asignaciones.map(
               (asignacion) =>
                 asignacion.salon === i + 1 && (
                   <div className="time-slot">
                     <div className="time">{asignacion.horario}</div>
                     <div className="event">{asignacion.curso}</div>
+                    <div className="event">{asignacion.carrera}</div>
                   </div>
                 )
             )}

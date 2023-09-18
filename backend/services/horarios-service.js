@@ -13,19 +13,19 @@ const limpiarData = (dataCursos, dataSalones) => {
           ...salon,
           espacios: [
             {
-              hora: "2 a 3",
+              hora: "2:00pm - 3:00pm",
               curso: undefined,
             },
             {
-              hora: "3 a 4",
+              hora: "3:00pm - 4:00pm",
               curso: undefined,
             },
             {
-              hora: "4 a 5",
+              hora: "4:00pm - 5:00pm",
               curso: undefined,
             },
             {
-              hora: "4 a 6",
+              hora: "5:00pm - 6:00pm",
               curso: undefined,
             },
           ],
@@ -53,7 +53,8 @@ const generarHorario3 = (dataCursos, dataSalones) => {
             asignacionesCompletas.push({
                 salon: salon.noSalon,
                 horario: espacio.hora,
-                curso: espacio.curso
+                curso: espacio.curso,
+                carrera: espacio.carrera
             })
         });
     });
@@ -98,7 +99,8 @@ const encontrarSalon = (curso, salones, salonesDescartados) => {
       let encontrado = false;
       for (let i = 0; i < salon.espacios.length; i++) {
         if (salon.espacios[i].curso === undefined) {
-          salon.espacios[i].curso = curso.carrera + ' ' + curso.nombre_curso;
+          salon.espacios[i].curso = curso.nombre_curso;
+          salon.espacios[i].carrera = curso.carrera;
           encontrado = true;
           break;
         }
