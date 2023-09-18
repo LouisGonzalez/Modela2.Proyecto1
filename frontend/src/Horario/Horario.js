@@ -7,6 +7,7 @@ import { NuevoCatedratico } from "./Forms/nuevo-catedratico";
 import { NuevoSalon } from "./Forms/nuevo-salon";
 import { NuevoCurso } from "./Forms/nuevo-curso";
 import { List } from "../components/List/list";
+import { NuevaCarrera } from "./Forms/nueva-carrera";
 
 const daysOfWeek = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"];
 const timeSlots = [];
@@ -30,6 +31,7 @@ function Horario() {
   const [dialogCatedratico, setDialogCatedratico ] = useState(false);
   const [dialogSalon, setDialogSalon] = useState(false);
   const [dialogCurso, setDialogCurso] = useState(false);
+  const [dialogCarrera, setDialogCarrera] = useState(false);
   const datosTest = ['asdf','ryterty','xcvqqqq']
 
   //Generacaion de horario por espacios
@@ -112,6 +114,10 @@ function Horario() {
 
   return (
     <div className="schedule">
+      <NuevaCarrera
+        dialogCarrera={dialogCarrera}
+        setDialogCarrera={setDialogCarrera}
+      />
       <NuevoCatedratico
         dialogCatedratico={dialogCatedratico}
         setDialogCatedratico={setDialogCatedratico}
@@ -120,11 +126,11 @@ function Horario() {
       <NuevoCurso dialogCurso={dialogCurso} setDialogCurso={setDialogCurso} />
 
       <Grid container rowSpacing={1} columnSpacing={1} sx={{ marginBottom: 5 }}>
-        <Grid item xs={8}>
+        <Grid item xs={6}>
           <Button onClick={horarioPorEspacios}>Horario por espacios</Button>
           <Button onClick={horarioPorCurso}>Horario por cursos</Button>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={6}>
           <div className="options">
             <Button
               variant="contained"
@@ -137,6 +143,9 @@ function Horario() {
             </Button>{" "}
             <Button variant="contained" onClick={() => setDialogSalon(true)}>
               Nuevo Salon
+            </Button>
+            <Button variant="contained" onClick={() => setDialogCarrera(true)}>
+              Nuevo Carrera
             </Button>
           </div>
         </Grid>
